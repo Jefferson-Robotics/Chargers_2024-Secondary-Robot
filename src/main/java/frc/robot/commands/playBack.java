@@ -36,9 +36,9 @@ public class playBack extends Command {
   public void initialize() {
     isDone=false;
     try {
-      fis = new FileInputStream(recSelector.getSelected());
-      bif = new BufferedInputStream(fis);
-      ois = new ObjectInputStream(bif);
+      fis = new FileInputStream(recSelector.getSelected()); // file input
+      bif = new BufferedInputStream(fis); //buffer input
+      ois = new ObjectInputStream(bif); // OBJECT INPUT
     } catch (Exception e) {
      System.out.println("Failed to start input stream.");
       e.printStackTrace();

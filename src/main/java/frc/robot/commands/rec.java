@@ -41,9 +41,9 @@ public class rec extends Command {
   public void initialize() {
     try {
       recFile = new File(recDir,FileName.getString("rec"+FileNum)+FileType);
-      fos = new FileOutputStream(recFile); //File output stream
-      bos = new BufferedOutputStream(fos); // buffer output
-      oos = new ObjectOutputStream(bos); // object output
+      fos = new FileOutputStream(recFile);
+      bos = new BufferedOutputStream(fos);
+      oos = new ObjectOutputStream(bos);
     } catch (Exception e) {
       System.out.println("Record failed to start output stream.");
       e.printStackTrace();
